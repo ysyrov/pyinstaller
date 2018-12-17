@@ -109,6 +109,7 @@ def run(pyi_args=None, pyi_config=None):
             spec_file = run_makespec(**vars(args))
 
         run_build(pyi_config, spec_file, **vars(args))
+        print('done.')
 
     except KeyboardInterrupt:
         raise SystemExit("Aborted by user request.")

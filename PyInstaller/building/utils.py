@@ -249,7 +249,11 @@ def checkCache(fnm, strip=False, upx=False, dist_nm=None):
         manifest.writeprettyxml(cachedfile)
         return cachedfile
 
-    if upx:
+    # add not compressible for v140
+    if basenm.startswith('api-ms') or basenm.startswith('vcruntime'):
+        cmd = None
+
+    elif upx:
         if strip:
             fnm = checkCache(fnm, strip=True, upx=False)
         bestopt = "--best"
