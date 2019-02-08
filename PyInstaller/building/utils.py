@@ -250,7 +250,7 @@ def checkCache(fnm, strip=False, upx=False, dist_nm=None):
         return cachedfile
 
     # add not compressible for v140
-    if basenm.startswith('api-ms') or basenm.startswith('vcruntime'):
+    if basenm.startswith('api-ms') or basenm.startswith('vcruntime') or basenm.startswith('msvcp'):
         cmd = None
 
     elif upx:
