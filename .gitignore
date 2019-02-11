@@ -2,6 +2,7 @@
 /PyInstaller/bootloader/Linux-32bit/
 /PyInstaller/bootloader/Linux-64bit/
 /PyInstaller/bootloader/Darwin-64bit/
+/PyInstaller/bootloader/Windows-32bit/
 
 *~
 .\#*
