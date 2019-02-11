@@ -249,8 +249,8 @@ def checkCache(fnm, strip=False, upx=False, dist_nm=None):
         manifest.writeprettyxml(cachedfile)
         return cachedfile
 
-    # add not compressible for v140
-    if basenm.startswith('api-ms') or basenm.startswith('vcruntime') or basenm.startswith('msvcp'):
+    # make DLLs not compressible
+    if basenm.endswith('.dll'):
         cmd = None
 
     elif upx:

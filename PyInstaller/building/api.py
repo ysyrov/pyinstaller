@@ -491,6 +491,9 @@ class EXE(Target):
         if is_win or is_darwin:
             if not self.console:
                 exe = exe + 'w'
+                # YVS
+                if self.uac_admin:
+                    exe = exe + 'a'
         # There are two types of bootloaders:
         # run     - release, no verbose messages in console.
         # run_d   - contains verbose messages in console.
